@@ -1,11 +1,18 @@
-# pi-completion
+# pi-shell-completion
 
-Shell completion scripts for [pi](https://github.com/mariozechner/pi-coding-agent), delivered as a pi extension. Supports bash and zsh.
+A [pi](https://github.com/mariozechner/pi-coding-agent) extension that provides shell completion scripts for bash and zsh.
 
-## Installation
+## Install
 
-```sh
-pi install path/to/pi-completion
+```bash
+# Global (user-level)
+pi install ssh://git@github.com/SunflowerFuchs/pi-shell-completion.git
+
+# Project-level (shared with team via .pi/settings.json)
+pi install -l ssh://git@github.com/SunflowerFuchs/pi-shell-completion.git
+
+# Try without installing
+pi -e ssh://git@github.com/SunflowerFuchs/pi-shell-completion.git
 ```
 
 ## Setup
@@ -26,13 +33,25 @@ Add to `~/.bashrc`:
 eval "$(pi --completion bash)"
 ```
 
-## What it completes
+## What It Completes
 
-- **Flags**: all pi CLI flags (`--provider`, `--model`, `--thinking`, etc.)
-- **Enum values**: `--provider anthropic`, `--thinking high`, `--mode json`, etc.
-- **File paths**: `--export`, `--extension`, `--skill`, `--session-dir`, etc.
-- **Subcommands**: `install`, `remove`, `update`, `list`, `config`
+- **Flags** — all pi CLI flags (`--provider`, `--model`, `--thinking`, etc.)
+- **Enum values** — `--provider anthropic`, `--thinking high`, `--mode json`, etc.
+- **File paths** — `--export`, `--extension`, `--skill`, `--session-dir`, etc.
+- **Subcommands** — `install`, `remove`, `update`, `list`, `config`
 
-## How it works
+## How It Works
 
 The extension intercepts `pi --completion <shell>` during loading and prints the completion script for the requested shell, then exits. This lets you use `eval "$(pi --completion zsh)"` in your shell config without any extra files.
+
+## Development
+
+```bash
+npm install
+npm run typecheck
+npm test
+```
+
+## License
+
+MIT
