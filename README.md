@@ -1,6 +1,6 @@
 # pi-shell-completion
 
-A [pi](https://github.com/mariozechner/pi-coding-agent) extension that provides shell completion scripts for bash and zsh.
+A [pi](https://github.com/earendil-works/pi) extension that provides shell completion scripts for bash and zsh.
 
 ## Install
 
