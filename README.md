@@ -6,13 +6,13 @@ A [pi](https://github.com/earendil-works/pi) extension that provides shell compl
 
 ```bash
 # Global (user-level)
-pi install ssh://git@github.com/SunflowerFuchs/pi-shell-completion.git
+pi install ssh://git@github.com/AshesToAgents/pi-shell-completion.git
 
 # Project-level (shared with team via .pi/settings.json)
-pi install -l ssh://git@github.com/SunflowerFuchs/pi-shell-completion.git
+pi install -l ssh://git@github.com/AshesToAgents/pi-shell-completion.git
 
 # Try without installing
-pi -e ssh://git@github.com/SunflowerFuchs/pi-shell-completion.git
+pi -e ssh://git@github.com/AshesToAgents/pi-shell-completion.git
 ```
 
 ## Setup
