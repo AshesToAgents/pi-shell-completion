@@ -21,6 +21,7 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "update-fixtures": "node scripts/update-fixtures.mjs"
   }
 }
